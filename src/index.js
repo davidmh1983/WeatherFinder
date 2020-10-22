@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
-import Weather from "./components/weather.js";
+import Weather from "./components/Weather.js";
 
 function App() {
   return (
