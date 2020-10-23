@@ -5,11 +5,18 @@ export const cityWeather = async(e) => {
     e.preventDefault();
     const city = e.target.elements.city.value || "Madrid";
     const country = e.target.elements.country.value || "es";
-    const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}&units=metric`
-    );
-    const data = await api_call.json();
+    const ls = JSON.parse(localStorage.getItem('temperature'));
+    let data = {};
+    if(ls.name === city && ls.sys.country === country.toUpperCase()) {
+      data = ls;
+    }else{
+      const api_call = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}&units=metric`
+      );
+      data = await api_call.json();
+    } 
     const existPlace = city && country;
+    localStorage.setItem("temperature", JSON.stringify(data));
     return({
       information: [
         {
