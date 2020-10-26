@@ -19,18 +19,18 @@ export const cityWeather = (city, country) => {
         {
           "id":802,
           "main":"Clouds",
-          "description":"scattered clouds",
+          "description":"arida",
           "icon":"03d"
         }
       ],
       "base":"stations",
       "main":{
-        "temp":15.32,
+        "temp":13.4,
         "feels_like":11.83,
         "temp_min":14.44,
         "temp_max":16.11,
         "pressure":1024,
-        "humidity":59
+        "humidity":45
       },
       "visibility":10000,
       "wind":{

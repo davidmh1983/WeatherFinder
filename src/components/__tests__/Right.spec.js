@@ -12,13 +12,13 @@ const structuredData = (city, country) => {
     return {
       information: [
         {
-          check: true, label:'Temperature', result: '13.4'
+          check: true, label:'Temperature', result: 13.4
         },
         {
           check: true, label: 'Location', result: 'Madrid, ES'
         },
         {
-          check:true, label: 'Humidity', result: '45'
+          check:true, label: 'Humidity', result: 45
         },
         {
           check: true, label:'Description', result: 'arida'
@@ -46,6 +46,9 @@ function checkTest(city, country, code) {
   }
   if(code === 200){
     expect(response.name).toEqual(responseStructured.information[1].result.split(',')[0]);
+    expect(response.main.temp).toEqual(responseStructured.information[0].result);
+    expect(response.main.humidity).toEqual(responseStructured.information[2].result);
+    expect(response.weather[0].description).toEqual(responseStructured.information[3].result);
   }
 };
 

@@ -35,6 +35,7 @@ describe('Results Component', () => {
     const wrapper = shallow(<Results data={dataSuccess} />);
     expect(wrapper.find('.weather__key').length).toEqual(4);
     expect(wrapper.find('.weather__value').length).toEqual(4);
+    expect(wrapper.find('.weather__value').text).not.toEqual('');
     expect(wrapper.find('.weather__error').length).toEqual(0);
   });
 
@@ -43,5 +44,6 @@ describe('Results Component', () => {
     expect(wrapper.find('.weather__key').length).toEqual(0);
     expect(wrapper.find('.weather__value').length).toEqual(0);
     expect(wrapper.find('.weather__error').length).toEqual(1);
+    expect(wrapper.find('.weather__error').text).not.toEqual('');
   });
 });
