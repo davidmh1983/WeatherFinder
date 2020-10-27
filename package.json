@@ -7,9 +7,11 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.0",
     "babel-polyfill": "^6.26.0",
     "babel-regenerator-runtime": "^6.5.0",
     "bootstrap": "4.5.2",
+    "cypress": "^5.5.0",
     "env-cmd": "^10.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-15": "^1.4.2",
@@ -23,7 +25,10 @@
     "start": "env-cmd react-scripts start",
     "build": "env-cmd react-scripts build",
     "eject": "env-cmd react-scripts eject",
-    "test": "jest --config ./jest.config.json"
+    "test:e2e": "cypress open",
+    "test:unit": "jest --config ./jest.config.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "browserslist": {
     "production": [
@@ -39,6 +44,12 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "react-test-renderer": "^17.0.1"
   }
 }

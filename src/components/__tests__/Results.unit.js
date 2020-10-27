@@ -1,29 +1,28 @@
-
+import React from 'react';
 import Results from '../Results';
-import React from "react";
-import { shallow} from '../../../enzyme';
+import { shallow } from '../../../enzyme';
 
 const dataSuccess = {
   information: [
     {
-      check: true, label:'Temperature', result: '13.4'
+      check: true, label: 'Temperature', result: '13.4',
     },
     {
-      check: true, label: 'Location', result: 'Barcelona, ES'
+      check: true, label: 'Location', result: 'Barcelona, ES',
     },
     {
-      check:true, label: 'Humidity', result: '45'
+      check: true, label: 'Humidity', result: '45',
     },
     {
-      check: true, label:'Description', result: 'arida'
-    } 
+      check: true, label: 'Description', result: 'arida',
+    },
   ],
-  error: ""
-}
+  error: '',
+};
 const dataError = {
   information: [],
-  error: "city not found"
-}
+  error: 'city not found',
+};
 
 describe('Results Component', () => {
   it('renders correctly', () => {

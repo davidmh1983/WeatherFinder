@@ -1,59 +1,57 @@
 export const cityWeather = (city, country) => {
-
-  if( ( (city === '' || city === '') && country ==='ES') ||
-      ( (city === '' || city === '') && (country === '' || country === '') ) ||
-      ( city ==='Madrid' && country === 'FR') )
-  {
+  if (((city === '' || city === '') && country === 'ES')
+      || ((city === '' || city === '') && (country === '' || country === ''))
+      || (city === 'Madrid' && ((country === 'FR') || country === ''))) {
     return {
-      cod: "404",
-      message: "city not found"
-    }
+      cod: '404',
+      message: 'city not found',
+    };
   }
-  if(city === 'Madrid' && (country ==='ES' || country ==='')) {
+  if (city === 'Madrid' && country === 'ES') {
     return {
-      "coord":{
-        "lon":-3.7,
-        "lat":40.42
+      coord: {
+        lon: -3.7,
+        lat: 40.42,
       },
-      "weather":[
+      weather: [
         {
-          "id":802,
-          "main":"Clouds",
-          "description":"arida",
-          "icon":"03d"
-        }
+          id: 802,
+          main: 'Clouds',
+          description: 'arida',
+          icon: '03d',
+        },
       ],
-      "base":"stations",
-      "main":{
-        "temp":13.4,
-        "feels_like":11.83,
-        "temp_min":14.44,
-        "temp_max":16.11,
-        "pressure":1024,
-        "humidity":45
+      base: 'stations',
+      main: {
+        temp: 13.4,
+        feels_like: 11.83,
+        temp_min: 14.44,
+        temp_max: 16.11,
+        pressure: 1024,
+        humidity: 45,
       },
-      "visibility":10000,
-      "wind":{
-        "speed":4.1,
-        "deg":230
+      visibility: 10000,
+      wind: {
+        speed: 4.1,
+        deg: 230,
       },
-      "clouds":{
-        "all":40
+      clouds: {
+        all: 40,
       },
-      "dt":1603549269,
-      "sys":{
-        "type":1,
-        "id":6443,
-        "country":'ES',
-        "sunrise":1603521341,
-        "sunset":1603560116
+      dt: 1603549269,
+      sys: {
+        type: 1,
+        id: 6443,
+        country: 'ES',
+        sunrise: 1603521341,
+        sunset: 1603560116,
       },
-      "timezone":7200,
-      "id":3117735,
-      "name":city,
-      "cod":200
-    }
+      timezone: 7200,
+      id: 3117735,
+      name: city,
+      cod: 200,
+    };
   }
-}
+};
 
 export default cityWeather;

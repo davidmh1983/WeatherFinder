@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./style.css";
-import Weather from "./components/Weather.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './style.css';
+import Weather from './components/Weather';
 
 function App() {
   return (
@@ -11,5 +11,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);

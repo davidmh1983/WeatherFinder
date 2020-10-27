@@ -1,8 +1,8 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import Left from "./Left";
-import Right from "./Right";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Left from './Left';
+import Right from './Right';
 
 function Weather() {
   return (
